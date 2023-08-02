@@ -4,7 +4,7 @@ describe('Pet Store', () => {
         const petId = '1'; // Replace '0' with the actual pet ID
   
         cy.request({
-          method: 'Delete',
+          method: 'DELETE',
           url: `pet/${petId}`, // Use the correct endpoint with the actual pet ID
           body: {
 
