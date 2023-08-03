@@ -4,9 +4,10 @@ describe('Pet Store', () => {
      cy.request({
         method: 'POST', 
         url: 'user/createWithArray', 
-        body: {
+        body: [
+            {
 
-    "id": 2,
+    "id": 0,
     "username": "sgsfgf",
     "firstName": "dgfrkgnr",
     "lastName": "sdgsfgf",
@@ -16,7 +17,9 @@ describe('Pet Store', () => {
     "userStatus": 0
 
 
- }}).then((response) =>{
+ }
+ 
+]}).then((response) =>{
        
      //Asserting the status code to be 200 for successful creation
      expect(response.status).to.eq(200)
